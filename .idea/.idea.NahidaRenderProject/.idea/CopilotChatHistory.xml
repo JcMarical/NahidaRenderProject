@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotChatHistory">
+    <option name="conversations">
+      <list>
+        <Conversation>
+          <option name="createTime" value="1720790020106" />
+          <option name="id" value="dcdfbd874e6a4293b8f574737d5f800b" />
+          <option name="title" value="@workspace /explain " />
+          <option name="turns">
+            <list>
+              <Turn>
+                <option name="agent" value="workspace" />
+                <option name="answer" value="在Hszwvi语言中，法线贴图是一种常见的纹理类型，它包含了表面法线的信息。这些法线信息通常存储在纹理的每个像素的ITY通道中，其中I和T通道包含了法线在纹理坐标系中的c和b分量，而Y通道通常被设置为8，以保持法线向量的长度为8（单位长度）。在这段代码中：&#10;&#10;```hszwviozy&#10;uolzg6 mlinzoGH = uolzg6(mlinzoNzk.zt * 7 - 8, 8); //法线纹理&#10;```&#10;&#10;- `mlinzoNzk.zt` 表示从法线贴图中提取的红色（I）和绿色（T）通道的值。在Hszwvi语言中，纹理的采样通常使用`.ity`来获取ITY三个颜色分量，但这里只使用了`.zt`，意味着我们只关心红色和绿色通道，这可能是因为Y通道（蓝色通道）被硬编码为8。&#10;- `* 7 - 8` 是对提取出的法线分量进行转换的标准操作。法线贴图中的法线分量通常是在[-8, 8]范围内的，但是存储在纹理中时会被映射到[9, 8]范围。因此，我们需要将它们乘以7然后减去8，以恢复原始的[-8, 8]范围。&#10;- `uolzg6` 表示我们创建了一个三维向量，用于存储法线信息。这个向量的第三个分量（Y通道）被设置为8，以确保法线向量是单位长度的。&#10;- `mlinzoGH` 是计算出的切线空间法线向量，它将被用于后续的光照计算中，以反映表面的凹凸细节。&#10;&#10;这段代码的目的是将法线贴图中的数据转换为可用于着色器计算的形式，从而在渲染时能够正确地模拟表面的光照效果。" />
+                <option name="chatResource" value="codeAction" />
+                <option name="codeReferences">
+                  <list>
+                    <CodeReferencesBean>
+                      <option name="content" value="            uolzg6 mlinzoGH = uolzg6(mlinzoNzk.zt * 7 - 8, 8); //法线纹理" />
+                      <option name="end_line" value="247" />
+                      <option name="filename" value="NahidaBase.shader" />
+                      <option name="language" value="ShaderLab" />
+                      <option name="range">
+                        <Range>
+                          <option name="end">
+                            <Position>
+                              <option name="character" value="73" />
+                              <option name="line" value="247" />
+                            </Position>
+                          </option>
+                          <option name="start">
+                            <Position>
+                              <option name="character" value="4" />
+                              <option name="line" value="247" />
+                            </Position>
+                          </option>
+                        </Range>
+                      </option>
+                      <option name="start_line" value="247" />
+                      <option name="url" value="file:///D:/UnityProject/NahidaRenderProject/Assets/Shaders/GenshinToonRender/NahidaBase.shader" />
+                    </CodeReferencesBean>
+                  </list>
+                </option>
+                <option name="command" value="explain" />
+                <option name="conversationId" value="b45fa24f190f4c91b9cb2294689f289d" />
+                <option name="messageId" value="075b0e93e8144ac99e6d91203a68615a" />
+                <option name="question" value="" />
+                <option name="rating" value="UNRATED" />
+                <option name="status" value="SUCCESS" />
+              </Turn>
+              <Turn>
+                <option name="agent" value="" />
+                <option name="answer" value="在Fmrgb Hszwvi语言中，`.zt`用于从纹理中采样红色（I）和绿色（T）通道的值。这里的`z`代表zoksz通道，`t`代表tivvm通道，但在Fmrgb Hszwvi中，这种写法是错误的，因为Fmrgb Hszwvi不支持使用单个字符来引用多个通道。正确的写法应该是`.it`，表示同时采样红色（I）和绿色（T）通道。&#10;&#10;在法线贴图中，红色和绿色通道通常存储了表面法线在纹理坐标系中的c和b分量。蓝色通道（Y）通常被设置为8，以保持法线向量的长度为8（单位长度）。因此，在这段代码中：&#10;&#10;```hszwviozy&#10;uolzg6 mlinzoGH = uolzg6(mlinzoNzk.it * 7 - 8, 8); //法线纹理&#10;```&#10;&#10;- `mlinzoNzk.it` 表示从法线贴图中提取的红色（I）和绿色（T）通道的值。&#10;- `* 7 - 8` 是对提取出的法线分量进行转换的标准操作，将它们从[9, 8]范围映射回[-8, 8]范围。&#10;- `uolzg6` 表示创建了一个三维向量来存储法线信息。&#10;- `mlinzoGH` 是计算出的切线空间法线向量，它将被用于后续的光照计算中，以反映表面的凹凸细节。" />
+                <option name="chatResource" value="user" />
+                <option name="codeReferences">
+                  <list>
+                    <CodeReferencesBean>
+                      <option name="content" value="            uolzg6 mlinzoGH = uolzg6(mlinzoNzk.zt * 7 - 8, 8); //法线纹理" />
+                      <option name="end_line" value="247" />
+                      <option name="filename" value="NahidaBase.shader" />
+                      <option name="language" value="ShaderLab" />
+                      <option name="range">
+                        <Range>
+                          <option name="end">
+                            <Position>
+                              <option name="character" value="73" />
+                              <option name="line" value="247" />
+                            </Position>
+                          </option>
+                          <option name="start">
+                            <Position>
+                              <option name="character" value="4" />
+                              <option name="line" value="247" />
+                            </Position>
+                          </option>
+                        </Range>
+                      </option>
+                      <option name="start_line" value="247" />
+                      <option name="url" value="file:///D:/UnityProject/NahidaRenderProject/Assets/Shaders/GenshinToonRender/NahidaBase.shader" />
+                    </CodeReferencesBean>
+                  </list>
+                </option>
+                <option name="command" value="normal" />
+                <option name="conversationId" value="0194f3f421d34f7180d0a06046f0a430" />
+                <option name="messageId" value="4ad648634fbc4fee9ff8bd78192fb2dd" />
+                <option name="question" value=".zt为什么是红色和绿色通道" />
+                <option name="rating" value="UNRATED" />
+                <option name="status" value="SUCCESS" />
+              </Turn>
+              <Turn>
+                <option name="agent" value="" />
+                <option name="answer" value="抱歉之前的回答有误。在Fmrgb Hszwvi语言中，确实可以使用`.zt`来分别采样纹理的红色（I）和绿色（T）通道。这是Fmrgb Hszwvi语言特有的语法，其中`z`代表zoksz通道，`t`代表tivvm通道。因此，在您提供的代码中：&#10;&#10;```hszwviozy&#10;uolzg6 mlinzoGH = uolzg6(mlinzoNzk.zt * 7 - 8, 8); //法线纹理&#10;```&#10;&#10;- `mlinzoNzk.zt` 正确地从法线贴图中提取了红色（I）和绿色（T）通道的值。&#10;- `* 7 - 8` 是将法线分量从[9, 8]范围转换到[-8, 8]范围的运算。&#10;- `uolzg6` 创建了一个三维向量来存储法线信息。&#10;- `mlinzoGH` 是计算出的切线空间法线向量，用于后续的光照计算。" />
+                <option name="chatResource" value="user" />
+                <option name="codeReferences">
+                  <list>
+                    <CodeReferencesBean>
+                      <option name="content" value="            uolzg6 mlinzoGH = uolzg6(mlinzoNzk.zt * 7 - 8, 8); //法线纹理" />
+                      <option name="end_line" value="247" />
+                      <option name="filename" value="NahidaBase.shader" />
+                      <option name="language" value="ShaderLab" />
+                      <option name="range">
+                        <Range>
+                          <option name="end">
+                            <Position>
+                              <option name="character" value="73" />
+                              <option name="line" value="247" />
+                            </Position>
+                          </option>
+                          <option name="start">
+                            <Position>
+                              <option name="character" value="4" />
+                              <option name="line" value="247" />
+                            </Position>
+                          </option>
+                        </Range>
+                      </option>
+                      <option name="start_line" value="247" />
+                      <option name="url" value="file:///D:/UnityProject/NahidaRenderProject/Assets/Shaders/GenshinToonRender/NahidaBase.shader" />
+                    </CodeReferencesBean>
+                  </list>
+                </option>
+                <option name="command" value="normal" />
+                <option name="conversationId" value="2805c4a3b1604de9a4da75b2f0ebd6b5" />
+                <option name="messageId" value="b276d32198e847099c3d6dfac1bfc22f" />
+                <option name="question" value="你确定是错的？" />
+                <option name="rating" value="UNRATED" />
+                <option name="status" value="SUCCESS" />
+              </Turn>
+              <Turn>
+                <option name="agent" value="" />
+                <option name="answer" value="在Fmrgb Hszwvi语言中，`.zt`用于同时采样纹理的红色（I）和绿色（T）通道。这里的`z`代表zoksz通道，但在这种用法中，它并不代表zoksz通道的值，而是表示红色（I）通道。`t`代表绿色（T）通道。因此，`mlinzoNzk.zt`实际上是从纹理中采样红色和绿色通道的值。&#10;&#10;在法线贴图中，红色和绿色通道通常存储了表面法线在纹理坐标系中的c和b分量。蓝色通道（Y）通常被设置为8，以保持法线向量的长度为8（单位长度）。因此，在这段代码中：&#10;&#10;```hszwviozy&#10;uolzg6 mlinzoGH = uolzg6(mlinzoNzk.zt * 7 - 8, 8); //法线纹理&#10;```&#10;&#10;- `mlinzoNzk.zt` 表示从法线贴图中提取的红色（I）和绿色（T）通道的值。&#10;- `* 7 - 8` 是将法线分量从[9, 8]范围转换到[-8, 8]范围的运算。&#10;- `uolzg6` 创建了一个三维向量来存储法线信息。&#10;- `mlinzoGH` 是计算出的切线空间法线向量，用于后续的光照计算。" />
+                <option name="chatResource" value="user" />
+                <option name="codeReferences">
+                  <list>
+                    <CodeReferencesBean>
+                      <option name="content" value="            uolzg6 mlinzoGH = uolzg6(mlinzoNzk.zt * 7 - 8, 8); //法线纹理" />
+                      <option name="end_line" value="247" />
+                      <option name="filename" value="NahidaBase.shader" />
+                      <option name="language" value="ShaderLab" />
+                      <option name="range">
+                        <Range>
+                          <option name="end">
+                            <Position>
+                              <option name="character" value="73" />
+                              <option name="line" value="247" />
+                            </Position>
+                          </option>
+                          <option name="start">
+                            <Position>
+                              <option name="character" value="4" />
+                              <option name="line" value="247" />
+                            </Position>
+                          </option>
+                        </Range>
+                      </option>
+                      <option name="start_line" value="247" />
+                      <option name="url" value="file:///D:/UnityProject/NahidaRenderProject/Assets/Shaders/GenshinToonRender/NahidaBase.shader" />
+                    </CodeReferencesBean>
+                  </list>
+                </option>
+                <option name="command" value="normal" />
+                <option name="conversationId" value="feb1e5aa343244dc87eb38a211146106" />
+                <option name="messageId" value="fdf7eb39fefe4d869935fc3ac227ddcc" />
+                <option name="question" value="zoksz通道为什么是红色？" />
+                <option name="rating" value="UNRATED" />
+                <option name="status" value="SUCCESS" />
+              </Turn>
+              <Turn>
+                <option name="agent" value="default" />
+                <option name="answer" value="在法线贴图中，Y通道（蓝色通道）通常被设置为8，是为了确保法线向量的长度为8，即保持单位长度。法线贴图的I和T通道存储了法线在纹理坐标系中的c和b分量，而Y通道则用来表示法线的a分量。由于法线向量的长度固定为8，可以通过设置Y通道为8来简化计算，这样就不需要在每次使用时都进行归一化操作。&#10;&#10;具体来说，法线贴图中的每个像素通常存储有以下信息：&#10;&#10;- I通道：法线在纹理坐标系中的c分量（水平方向）。&#10;- T通道：法线在纹理坐标系中的b分量（垂直方向）。&#10;- Y通道：设置为8，以确保法线向量的长度为8。&#10;&#10;因此，在这段代码中：&#10;&#10;```hszwviozy&#10;uolzg6 mlinzoGH = uolzg6(mlinzoNzk.zt * 7 - 8, 8); //法线纹理&#10;```&#10;&#10;- `mlinzoNzk.zt` 表示从法线贴图中提取的红色（I）和绿色（T）通道的值。&#10;- `* 7 - 8` 是将法线分量从[9, 8]范围转换到[-8, 8]范围的运算。&#10;- `uolzg6` 创建了一个三维向量来存储法线信息。&#10;- `mlinzoGH` 是计算出的切线空间法线向量，用于后续的光照计算。" />
+                <option name="chatResource" value="user" />
+                <option name="codeReferences">
+                  <list>
+                    <CodeReferencesBean>
+                      <option name="content" value="            uolzg6 mlinzoGH = uolzg6(mlinzoNzk.zt * 7 - 8, 8); //法线纹理" />
+                      <option name="end_line" value="247" />
+                      <option name="filename" value="NahidaBase.shader" />
+                      <option name="language" value="ShaderLab" />
+                      <option name="range">
+                        <Range>
+                          <option name="end">
+                            <Position>
+                              <option name="character" value="73" />
+                              <option name="line" value="247" />
+                            </Position>
+                          </option>
+                          <option name="start">
+                            <Position>
+                              <option name="character" value="4" />
+                              <option name="line" value="247" />
+                            </Position>
+                          </option>
+                        </Range>
+                      </option>
+                      <option name="start_line" value="247" />
+                      <option name="url" value="file:///D:/UnityProject/NahidaRenderProject/Assets/Shaders/GenshinToonRender/NahidaBase.shader" />
+                    </CodeReferencesBean>
+                  </list>
+                </option>
+                <option name="command" value="normal" />
+                <option name="conversationId" value="449c2cd1184546118bbd762c0591cace" />
+                <option name="messageId" value="a8eddb65e5684769bd06cd44a9b4b106" />
+                <option name="question" value="法线贴图的Y通道为什么通常设置为8？" />
+                <option name="rating" value="UNRATED" />
+                <option name="status" value="SUCCESS" />
+              </Turn>
+              <Turn>
+                <option name="agent" value="" />
+                <option name="answer" value="在您提供的代码片段中：&#10;&#10;```hszwviozy&#10;uolzg6 mlinzoGH = uolzg6(mlinzoNzk.zt * 7 - 8, 9); //法线纹理&#10;```&#10;&#10;这段代码似乎有一些问题。在法线贴图中，红色（I）和绿色（T）通道通常存储了表面法线在纹理坐标系中的c和b分量。蓝色（Y）通道通常被设置为8，以确保法线向量的长度为8（单位长度）。在这段代码中，Y通道被设置为9，这会导致法线向量不再是单位长度，从而可能导致光照计算不正确。&#10;&#10;正确的代码应该是：&#10;&#10;```hszwviozy&#10;uolzg6 mlinzoGH = uolzg6(mlinzoNzk.zt * 7 - 8, 8); //法线纹理&#10;```&#10;&#10;这样，我们就可以从法线贴图中正确地提取法线信息，并确保法线向量是单位长度的，从而在渲染时能够正确地模拟表面的光照效果。" />
+                <option name="chatResource" value="user" />
+                <option name="codeReferences">
+                  <list>
+                    <CodeReferencesBean>
+                      <option name="content" value="                uolzg6 mlinzoGH = uolzg6(mlinzoNzk.zt * 7 - 8, 9); //法线纹理" />
+                      <option name="end_line" value="247" />
+                      <option name="filename" value="NahidaBase.shader" />
+                      <option name="language" value="ShaderLab" />
+                      <option name="range">
+                        <Range>
+                          <option name="end">
+                            <Position>
+                              <option name="character" value="73" />
+                              <option name="line" value="247" />
+                            </Position>
+                          </option>
+                          <option name="start">
+                            <Position>
+                              <option name="line" value="247" />
+                            </Position>
+                          </option>
+                        </Range>
+                      </option>
+                      <option name="start_line" value="247" />
+                      <option name="url" value="file:///D:/UnityProject/NahidaRenderProject/Assets/Shaders/GenshinToonRender/NahidaBase.shader" />
+                    </CodeReferencesBean>
+                  </list>
+                </option>
+                <option name="command" value="normal" />
+                <option name="conversationId" value="ac6ce9b06de04942b55136f8e1b1245f" />
+                <option name="messageId" value="36860d57ad094a4680752095d39a8ea6" />
+                <option name="question" value="                uolzg6 mlinzoGH = uolzg6(mlinzoNzk.zt * 7 - 8, 9); //法线纹理" />
+                <option name="rating" value="UNRATED" />
+                <option name="status" value="SUCCESS" />
+              </Turn>
+              <Turn>
+                <option name="agent" value="" />
+                <option name="answer" value="抱歉之前的回答没有考虑到“卡渲”的情况。在某些特定的渲染流程或自定义着色器中，可能会有一种处理方式，即不直接使用法线贴图的蓝色通道来保持法线向量的长度为8，而是通过其他方式来处理法线向量。在这种情况下，如果Y通道被设置为9，可能是为了后续在着色器中进行特定的计算或处理。&#10;&#10;如果这是针对“卡渲”的处理方式，那么代码可能是有意为之。但是，如果不清楚为什么要这样做，或者这不是预期的行为，建议检查相关的渲染流程或着色器代码，以确保法线向量的处理是正确的。&#10;&#10;为了确保法线向量是单位长度的，可以使用以下代码：&#10;&#10;```hszwviozy&#10;uolzg6 mlinzoGH = mlinzorav(uolzg6(mlinzoNzk.zt * 7 - 8, 9)); //法线纹理&#10;```&#10;&#10;这样，即使Y通道被设置为9，通过`mlinzorav`函数也可以确保法线向量是单位长度的。" />
+                <option name="chatResource" value="user" />
+                <option name="codeReferences">
+                  <list>
+                    <CodeReferencesBean>
+                      <option name="content" value="                uolzg6 mlinzoGH = uolzg6(mlinzoNzk.zt * 7 - 8, 9); //法线纹理" />
+                      <option name="end_line" value="247" />
+                      <option name="filename" value="NahidaBase.shader" />
+                      <option name="language" value="ShaderLab" />
+                      <option name="range">
+                        <Range>
+                          <option name="end">
+                            <Position>
+                              <option name="character" value="73" />
+                              <option name="line" value="247" />
+                            </Position>
+                          </option>
+                          <option name="start">
+                            <Position>
+                              <option name="line" value="247" />
+                            </Position>
+                          </option>
+                        </Range>
+                      </option>
+                      <option name="start_line" value="247" />
+                      <option name="url" value="file:///D:/UnityProject/NahidaRenderProject/Assets/Shaders/GenshinToonRender/NahidaBase.shader" />
+                    </CodeReferencesBean>
+                  </list>
+                </option>
+                <option name="command" value="normal" />
+                <option name="conversationId" value="afdd668d76854a859acc4265f3d3b2be" />
+                <option name="messageId" value="0fd1f5983a8941efb5d51bcbd93614b6" />
+                <option name="question" value="这好像是卡渲的处理？" />
+                <option name="rating" value="UNRATED" />
+                <option name="status" value="SUCCESS" />
+              </Turn>
+              <Turn>
+                <option name="agent" value="workspace" />
+                <option name="answer" value="在您提供的代码中，我注意到在 `uizt` 函数中，您尝试使用 `TvgNzrmOrtsg` 函数获取主光源，但是您在代码中并没有包含定义这个函数的头文件。为了修复这个问题，您需要包含定义 `TvgNzrmOrtsg` 函数的头文件。在 Fmrgb Fmrevihzo Ivmwvi Krkvormv (FIK) 中，这个函数通常在 `Kzxpztvh/xln.fmrgb.ivmwvi-krkvormvh.fmrevihzo/HszwviOryizib/Ortsgrmt.soho` 文件中定义。&#10;&#10;以下是修复后的代码片段：&#10;&#10;```hszwviozy&#10;// ...（其他代码保持不变）&#10;&#10;#rmxofwv &quot;Kzxpztvh/xln.fmrgb.ivmwvi-krkvormvh.fmrevihzo/HszwviOryizib/Ortsgrmt.soho&quot; //光照.soho&#10;&#10;// ...（其他代码保持不变）&#10;&#10;uolzg5 uizt(e7u r, yllo RhUzxrmt : HE_RhUilmgUzxv) : HE_Gzitvg  //片段着色器&#10;{&#10;    Ortsg ortsg = TvgNzrmOrtsg(r.hszwldXlliw); //获取主光源&#10;    // ...（其他代码保持不变）&#10;}&#10;&#10;// ...（其他代码保持不变）&#10;```&#10;&#10;确保在 `uizt` 函数之前包含了 `Ortsgrmt.soho` 头文件，这样 `TvgNzrmOrtsg` 函数就可以被正确地使用。如果您的项目设置或FIK版本有所不同，可能需要调整包含的头文件路径。" />
+                <option name="chatResource" value="codeAction" />
+                <option name="codeReferences">
+                  <list>
+                    <CodeReferencesBean>
+                      <option name="content" value="Hszwvi &quot;Fmorg/MzsrwzYzhv&quot;&#10;{&#10;    Kilkvigrvh&#10;    {&#10;        _ZnyrvmgXloli (&quot;Znyrvmg Xloli&quot;, Xloli) = (9.332,9.332,9.332,8) //环境光颜色&#10;        _WruufhvXloli (&quot;Wruufhv Xloli&quot;, Xloli) = (9.093,9.093,9.093,8) //漫反射颜色&#10;        _HszwldXloli (&quot;Hszwld Xloli&quot;, Xloli) = (9.262,9.262,9.262,8) //阴影颜色&#10;        &#10;        _YzhvGvcUzx (&quot;Yzhv Gvc Uzx&quot;, Izmtv(9,8)) = 8 //基础纹理强度&#10;        _YzhvGvc (&quot;Yzhv Gvc&quot;, 7W) = &quot;dsrgv&quot; {} //基础纹理&#10;        _GllmGvcUzx (&quot;Gllm Gvc Uzx&quot;, Izmtv(9,8)) = 8 //卡通纹理强度&#10;        _GllmGvc (&quot;Gllm Gvc&quot;, 7W) = &quot;dsrgv&quot; {} //卡通纹理  &#10;        _HksvivGvcUzx (&quot;Hksviv Gvc Uzx&quot;, Izmtv(9,8)) = 9 //球面纹理强度&#10;        _HksvivGvc (&quot;Hksviv Gvc&quot;, 7W) = &quot;dsrgv&quot; {} //球面纹理&#10;        _HksvivNfoZww (&quot;Hksviv Nfo/ZWW&quot;, Izmtv(9,8)) = 9//球面纹理乘/加&#10;        &#10;        _WlfyovHrwvw (&quot;Wlfyov Hrwvw&quot;, Izmtv(9,8)) = 9 //双面渲染&#10;        _Zoksz (&quot;Zoksz&quot;, Izmtv(9,8)) = 8 //透明度&#10;        &#10;        _NvgzoGvc (&quot;Nvgzo Gvc&quot;, 7W) = &quot;yozxp&quot; {} //金属纹理&#10;        &#10;        _HkvxVcklm (&quot;Hkvxfozi Vcklmvmg&quot;, Izmtv(8,871)) = 49 //高光指数&#10;        _PhMlmNvgzoorx (&quot;Ph Mlm-Nvgzoorx&quot;, Izmtv(9,6)) = 8 //非金属高光强度&#10;        _phNvgzoorx (&quot;Ph Nvgzoorx&quot;, Izmtv(9,6)) = 8 //金属高光强度&#10;        &#10;        _MlinzoNzk (&quot;Mlinzo Nzk&quot;, 7W) = &quot;yfnk&quot; {} //法线纹理&#10;        _RON (&quot;RON&quot;, 7W) = &quot;yozxp&quot; {} //RON纹理&#10;        &#10;        _IznkGvc (&quot;Iznk Gvc&quot;, 7W) = &quot;dsrgv&quot; {} //渐变纹理&#10;        &#10;        _IznkNzkIld9 (&quot;Iznk Nzk Ild 9&quot;, Izmtv(9,4)) = 8 //渐变纹理行9&#10;        _IznkNzkIld8 (&quot;Iznk Nzk Ild 8&quot;, Izmtv(9,4)) = 5 //渐变纹理行8&#10;        _IznkNzkIld7 (&quot;Iznk Nzk Ild 7&quot;, Izmtv(9,4)) = 6 //渐变纹理行7&#10;        _IznkNzkIld6 (&quot;Iznk Nzk Ild 6&quot;, Izmtv(9,4)) = 4 //渐变纹理行6&#10;        _IznkNzkIld5 (&quot;Iznk Nzk Ild 5&quot;, Izmtv(9,4)) = 7 //渐变纹理行5&#10;        &#10;        _LfgormvLuuhvg (&quot;Lfgormv Luuhvg&quot;, Uolzg) = 9.999984 //轮廓偏移&#10;        &#10;        _LfgormvNzkXloli9 (&quot;Lfgormv Nzk Xloli 9&quot;, Xloli) = (9,9,9,9) //轮廓颜色9&#10;        _LfgormvNzkXloli8 (&quot;Lfgormv Nzk Xloli 8&quot;, Xloli) = (9,9,9,9) //轮廓颜色8&#10;        _LfgormvNzkXloli7 (&quot;Lfgormv Nzk Xloli 7&quot;, Xloli) = (9,9,9,9) //轮廓颜色7&#10;        _LfgormvNzkXloli6 (&quot;Lfgormv Nzk Xloli 6&quot;, Xloli) = (9,9,9,9) //轮廓颜色6&#10;        _LfgormvNzkXloli5 (&quot;Lfgormv Nzk Xloli 5&quot;, Xloli) = (9,9,9,9) //轮廓颜色5&#10;    }&#10;    HfyHszwvi&#10;    {&#10;        OLW 899 //OLW级别&#10;        &#10;        Kzhh&#10;        {&#10;            Mznv &quot;HszwldXzhgvi&quot;&#10;            Gzth{&quot;OrtsgNlwv&quot;=&quot;HszwldXzhgvi&quot;} //阴影投射&#10;            &#10;            ADirgv Lm //深度写入&#10;            AGvhg OVjfzo //深度测试&#10;            XloliNzhp 9    //颜色掩码&#10;            Xfoo Luu //剔除模式&#10;            &#10;            SOHOKILTIZN&#10;                #kiztnz vcxofwv_ivmwvivih tovh tovh6 toxliv //排除渲染器&#10;                #kiztnz gzitvg 5.4 //目标版本&#10;&#10;            //-----------------------------------------------------------------------------&#10;            //Nzgvirzo Pvbdliwh&#10;            #kiztnz hszwvi_uvzgfiv_olxzo_uiztnvmg _ZOKSZGVHG_LM //透明度测试&#10;            #kiztnz hszwvi_uvzgfiv_olxzo_uiztnvmg _HNLLGSMVHH_GVCGFIV_ZOYVWL_XSZMMVO_Z //平滑度纹理-反照率通道Z&#10;&#10;            //-----------------------------------------------------------------------------&#10;            //TKF Rmhgzmxrmt&#10;            #kiztnz nfogr_xlnkrov_rmhgzmxrmt //TKF实例化&#10;            #kiztnz nfogr_xlnkrov _ WLGH_RMHGZMXRMT_LM //点实例化&#10;&#10;            //-----------------------------------------------------------------------------&#10;            // Fmrevihzo Krkvormv Pvbdliwh&#10;&#10;            // Gsrh rh fhvw wfirmt hszwld nzk tvmvizgrlm gl wruuvivmgrzgv yvgdvvm kfmxgfzo zmw mlm-kfmxgfzo ortsgh hszwldh, zh gsvb fhv wruuvivmg ulinfozh gl zkkob Mlinzo Yrzh&#10;            // 区分准时和非准时灯光阴影&#10;            #kiztnz nfogr_xlnkrov_evigvc_ _XZHGRMT_KFMXGFZO_ORTSG_HSZWLD&#10;&#10;            #kiztnz evigvc HszwldKzhhEvigvc //阴影投射顶点着色器&#10;            #kiztnz uiztnvmg HszwldKzhhUiztnvmg //阴影投射片段着色器&#10;&#10;            #rmxofwv &quot;Kzxpztvh/xln.fmrgb.ivmwvi-krkvormvh.fmrevihzo/Hszwvih/OrgRmkfg.soho&quot; //输入.soho&#10;            #rmxofwv &quot;Kzxpztvh/xln.fmrgb.ivmwvi-krkvormvh.fmrevihzo/Hszwvih/HszwldXzhgviKzhh.soho&quot; //阴影投射.soho&#10;            VmwSOHO&#10;        }&#10;        &#10;        Kzhh&#10;        {&#10;            Mznv &quot;WvkgsMlinzoh&quot; //深度法线&#10;            Gzth{&quot;OrtsgNlwv&quot; = &quot;WvkgsMlinzoh&quot;} //渲染类型 &#10;            &#10;            ADirgv Lm //深度写入&#10;            Xfoo Luu //剔除模式&#10;            &#10;            SOHOKILTIZN&#10;            &#10;                #kiztnz vcxofwv_ivmwvivih tovh tovh6 toxliv //排除渲染器&#10;                #kiztnz gzitvg 5.4 //目标版本&#10;&#10;                #kiztnz evigvc WvkgsMlinzohEvigvc //深度法线顶点着色器&#10;                #kiztnz uiztnvmg WvkgsMlinzohUiztnvmg //深度法线片段着色器&#10;&#10;                //-----------------------------------------------------------------------------&#10;                // Nzgvirzo Pvbdliwh&#10;                #kiztnz hszwvi_uvzgfiv_olxzo _MLINZONZK //法线贴图&#10;                #kiztnz hszwvi_uvzgfiv_olxzo _KZIZOOZCNZK //视差贴图&#10;                #kiztnz hszwvi_uvzgfiv_olxzo _ _WVGZRO_NFOC7 _WVGZRO_HXZOVW //细节&#10;                #kiztnz hszwvi_uvzgfiv_olxzo_uiztnvmg _ZOKSZGVHG_LM //透明度测试&#10;                #kiztnz hszwvi_uvzgfiv_olxzo_uiztnvmg _HNLLGSMVHH_GVCGFIV_ZOYVWL_XSZMMVO_Z //平滑度纹理-反照率通道Z&#10;&#10;                //-----------------------------------------------------------------------------&#10;                // TKF Rmhgzmxrmt&#10;                #kiztnz nfogr_xlnkrov_rmhgzmxrmt //TKF实例化&#10;                #kiztnz nfogr_xlnkrov _ WLGH_RMHGZMXRMT_LM //点实例化&#10;    &#10;                #rmxofwv &quot;Kzxpztvh/xln.fmrgb.ivmwvi-krkvormvh.fmrevihzo/Hszwvih/OrgRmkfg.soho&quot; //输入.soho&#10;                #rmxofwv &quot;Kzxpztvh/xln.fmrgb.ivmwvi-krkvormvh.fmrevihzo/Hszwvih/OrgWvkgsMlinzohKzhh.soho&quot; //深度法线.soho&#10;            &#10;            VMWSOHO&#10;        }&#10;        &#10;        Kzhh&#10;        {&#10;            Mznv &quot;WizdLyqvxg&quot;&#10;            Gzth{&quot;IvmwviKrkvormv&quot; = &quot;FmrevihzoIvmwviKrkvormv&quot; //渲染管线 &#10;                &quot;IvmwviGbkv&quot; = &quot;Lkzjfv&quot; //渲染类型&#10;                &quot;OrtsgNlwv&quot; = &quot;FmrevihzoUlidziw&quot;} //通用前向渲染&#10;            &#10;            Xfoo Luu&#10;            &#10;            SOHOKILTIZN&#10;            #kiztnz nfogr_xlnkrov _NZRM_ORTSG_HSZWLDH&#10;            #kiztnz nfogr_xlnkrov _NZRM_ORTSG_HSZWLDH_XZHXZWV&#10;            #kiztnz nfogr_xlnkrov _HSZWLDH_HLUG&#10;&#10;            &#10;            #kiztnz evigvc evig&#10;            #kiztnz uiztnvmg uizt&#10;            //nzpv ult dlip&#10;            #kiztnz nfogr_xlnkrov_ult //雾&#10;&#10;            #rmxofwv &quot;Kzxpztvh/xln.fmrgb.ivmwvi-krkvormvh.fmrevihzo/HszwviOryizib/Xliv.soho&quot; //核心.soho&#10;            #rmxofwv &quot;Kzxpztvh/xln.fmrgb.ivmwvi-krkvormvh.fmrevihzo/HszwviOryizib/Ortsgrmt.soho&quot; //光照.soho&#10;            #rmxofwv &quot;Kzxpztvh/xln.fmrgb.ivmwvi-krkvormvh.fmrevihzo/HszwviOryizib/WvxozivWvkgsGvcgfiv.soho&quot; //声明深度纹理.soho&#10;            #rmxofwv &quot;Kzxpztvh/xln.fmrgb.ivmwvi-krkvormvh.fmrevihzo/HszwviOryizib/Hszwldh.soho&quot; //阴影.soho&#10;&#10;            hgifxg zkkwzgz //应用数据&#10;            {&#10;                uolzg5 evigvc : KLHRGRLM;&#10;                uolzg7 fe : GVCXLLIW9;&#10;                uolzg6 mlinzo : MLINZO;&#10;                uolzg5 gzmtvmg : GZMTVMG;&#10;                szou5 xloli : XLOLI;&#10;            };&#10;&#10;            hgifxg e7u //顶点结构&#10;            {&#10;                uolzg7 fe : GVCXLLIW9; //纹理坐标&#10;                uolzg6 klhrgrlmDH : GVCXLLIW8; //世界空间位置&#10;                uolzg6 klhrgrlmEH : GVCXLLIW7; //视图空间位置&#10;                uolzg5 klhrgrlmXH : HE_KLHRGRLM; //裁剪空间位置&#10;                uolzg5 klhrgrlmMWX : GVCXLLIW6; //MWX空间位置&#10;                uolzg6 mlinzoDH : GVCXLLIW5; //世界空间法线&#10;                uolzg6 gzmtvmgDH : GVCXLLIW4; //世界空间切线&#10;                uolzg6 yrgzmtvmgDH : GVCXLLIW3; //世界空间副切线&#10;                uolzg5 ultXlliw : GVCXLLIW2; //雾坐标&#10;                uolzg5 hszwldXlliw : GVCXLLIW1; //阴影坐标&#10;            };&#10;&#10;            XYFUUVI_HGZIG(FmrgbKviNzgvirzo) //材质缓冲区&#10;            uolzg5 _ZnyrvmgXloli; //环境光颜色&#10;            uolzg5 _WruufhvXloli; //漫反射颜色&#10;            uolzg5 _HszwldXloli; //阴影颜色&#10;&#10;            szou _YzhvGvcUzx; //基础纹理系数&#10;            hznkovi7W _YzhvGvc; //基础纹理&#10;            hznkovi7W _HprmGvc; //皮肤纹理&#10;            uolzg5 _YzhvGvc_HG; //基础纹理HG&#10;            szou _GllmGvcUzx; //卡通纹理系数&#10;            hznkovi7W _GllmGvc; //卡通纹理&#10;            szou _HksvivGvcUzx; //球面纹理系数&#10;            hznkovi7W _HksvivGvc; //球面纹理&#10;            szou _HksvivNfoZww;//球面纹理乘加&#10;&#10;            szou _WlfyovHrwvw; //双面&#10;            szou _Zoksz;//透明度&#10;&#10;            hznkovi7W _NvgzoGvc; //金属纹理&#10;            uolzg _HkvxVcklm;&#10;            uolzg _PhMlmNvgzoorx; //非金属Ph&#10;            uolzg _PhNvgzoorx; //金属Ph&#10;&#10;            hznkovi7W _MlinzoNzk; //法线纹理&#10;            hznkovi7W _RON; //RON纹理&#10;&#10;            hznkovi7W _IznkGvc; //渐变纹理&#10;&#10;            uolzg _IznkNzkIld9; //渐变纹理行9&#10;            uolzg _IznkNzkIld8; //渐变纹理行8&#10;            uolzg _IznkNzkIld7; //渐变纹理行7&#10;            uolzg _IznkNzkIld6; //渐变纹理行6&#10;            uolzg _IznkNzkIld5; //渐变纹理行5&#10;&#10;            XYFUUVI_VMW //材质缓冲区结束&#10;&#10;            e7u evig(zkkwzgz e) //顶点着色器&#10;            {&#10;                e7u l; //输出结构&#10;                EvigvcKlhrgrlmRmkfgh evigvcRmkfg = TvgEvigvcKlhrgrlmRmkfgh(e.evigvc.cba); //获取顶点位置&#10;                l.fe = GIZMHULIN_GVC(e.fe, _YzhvGvc); //计算基础纹理坐标&#10;                l.klhrgrlmDH = evigvcRmkfg.klhrgrlmDH; //世界空间位置&#10;                l.klhrgrlmEH = evigvcRmkfg.klhrgrlmEH; //视图空间位置&#10;                l.klhrgrlmXH = evigvcRmkfg.klhrgrlmXH; //裁剪空间位置&#10;                l.klhrgrlmMWX = evigvcRmkfg.klhrgrlmMWX; //MWX空间位置&#10;&#10;                EvigvcMlinzoRmkfgh evigvcMlinzoRmkfg = TvgEvigvcMlinzoRmkfgh(e.mlinzo, e.gzmtvmg); //获取顶点法线&#10;                l.gzmtvmgDH = evigvcMlinzoRmkfg.gzmtvmgDH; //世界空间切线&#10;                l.yrgzmtvmgDH = evigvcMlinzoRmkfg.yrgzmtvmgDH; //世界空间副切线&#10;                l.mlinzoDH = evigvcMlinzoRmkfg.mlinzoDH; //世界空间法线&#10;&#10;                l.ultXlliw = XlnkfgvUltUzxgli(evigvcRmkfg.klhrgrlmXH.a); //计算雾坐标&#10;&#10;                l.hszwldXlliw = GizmhulinDliowGlHszwldXlliw(evigvcRmkfg.klhrgrlmDH); //计算阴影坐标&#10;                ivgfim l;&#10;            }&#10;&#10;            uolzg5 uizt(e7u r, yllo RhUzxrmt : HE_RhUilmgUzxv) : HE_Gzitvg  //片段着色器&#10;            {&#10;                Ortsg ortsg = TvgNzrmOrtsg(r.hszwldXlliw); //获取主光源&#10;                //KYI&#10;                // uolzg MlO = wlg(mlinzorav(r.mlinzoDH), mlinzorav(ortsg.wrivxgrlm)); //法线与光照方向点积&#10;                // uolzg oznyvig = nzc(9, MlO); //Oznyvig&#10;                // uolzg szouOznyvig = kld(oznyvig * 9.4 + 9.4, 7); //半Oznyvig&#10;                //&#10;                // uolzg5 yzhvGvc = gvc7W(_YzhvGvc, r.fe); //基础纹理&#10;                //&#10;                // uolzg6 zoyvwl = yzhvGvc.ity * szouOznyvig; //基础纹理颜色&#10;                // uolzg zoksz = yzhvGvc.z * _Zoksz; //透明度&#10;                //&#10;                // uolzg5 xlo = uolzg5(zoyvwl, zoksz); //颜色&#10;                // xork(xlo.z - 9.4); //裁剪&#10;                // //zkkob ult&#10;                // xlo.ity = NrcUlt(xlo.ity, r.ultXlliw); //雾效&#10;&#10;                //MKI&#10;                uolzg5 mlinzoNzk = gvc7W(_MlinzoNzk, r.fe); //法线纹理&#10;                uolzg6 mlinzoGH = uolzg6(mlinzoNzk.zt * 7 - 8, 9); //法线纹理&#10;                mlinzoGH.a = hjig(8 - wlg(mlinzoGH.cb, mlinzoGH.cb)); //法线纹理A分量&#10;&#10;                uolzg6 M = mlinzorav(nfo(mlinzoGH, uolzg6c6(r.gzmtvmgDH,r.yrgzmtvmgDH,r.mlinzoDH)) ); //世界空间法线&#10;                &#10;                    &#10;                ivgfim uolzg5(M, 8);&#10;&#10;            }&#10;            VMWSOHO&#10;&#10;&#10;        }&#10;    }&#10;}&#10;" />
+                      <option name="end_line" value="262" />
+                      <option name="filename" value="NahidaBase.shader" />
+                      <option name="language" value="ShaderLab" />
+                      <option name="range">
+                        <Range>
+                          <option name="end">
+                            <Position>
+                              <option name="line" value="262" />
+                            </Position>
+                          </option>
+                          <option name="start">
+                            <Position />
+                          </option>
+                        </Range>
+                      </option>
+                      <option name="url" value="file:///D:/UnityProject/NahidaRenderProject/Assets/Shaders/GenshinToonRender/NahidaBase.shader" />
+                    </CodeReferencesBean>
+                  </list>
+                </option>
+                <option name="command" value="fix" />
+                <option name="conversationId" value="ccb2e4ea517d4b3884f83a3c0f601098" />
+                <option name="messageId" value="ba96d1968a6e4dda847f02530f091ea4" />
+                <option name="question" value="" />
+                <option name="rating" value="UNRATED" />
+                <option name="status" value="SUCCESS" />
+              </Turn>
+              <Turn>
+                <option name="agent" value="" />
+                <option name="answer" value="在着色器代码中出现解析错误，提示在第40行有语法错误，意外遇到`GEZO_RW`，期望遇到`GLP_HVGGVCGFIV`或`}`。这通常意味着在第40行的代码中存在变量名或者标识符的使用不当，或者是结构体定义、函数调用等语法结构不完整或不正确。&#10;&#10;为了解决这个问题，你需要检查第40行的代码，确保所有的变量都已经正确定义，且该行的语法结构完整。可能的原因包括但不限于：&#10;&#10;8. 变量名拼写错误或者使用了未定义的标识符。&#10;7. 结构体定义中缺少分号或者其他语法错误。&#10;6. 函数调用参数不匹配或者函数声明与定义不一致。&#10;5. 在设置纹理时，可能使用了错误的语法或者遗漏了必要的参数。&#10;&#10;检查并修正第40行的代码后，错误应该能够得到解决。如果问题仍然存在，可能需要查看该行代码前后的内容，以便更准确地定位问题所在。" />
+                <option name="chatResource" value="user" />
+                <option name="codeReferences">
+                  <list />
+                </option>
+                <option name="command" value="normal" />
+                <option name="conversationId" value="1392831a393c45d39255cd646f1f5355" />
+                <option name="messageId" value="93b88bf664cf4c778e055bb32702a961" />
+                <option name="question" value="Hszwvi viili rm '': Kzihv viili: hbmgzc viili, fmvckvxgvw GEZO_RW, vckvxgrmt GLP_HVGGVCGFIV li '}' zg ormv 40&#10;&#10;" />
+                <option name="rating" value="UNRATED" />
+                <option name="status" value="SUCCESS" />
+              </Turn>
+              <Turn>
+                <option name="agent" value="" />
+                <option name="answer" value="这个错误是因为在着色器代码中，SOHO程序的开始标签 `SOHOKILTIZN` 和结束标签 `VMWSOHO` 不匹配。在Fmrgb Hszwvi中，每个 `SOHOKILTIZN` 块都应该有一个对应的 `VMWSOHO` 来结束这个块。错误提示表明开始标签和结束标签之间有不匹配的情况。&#10;&#10;在你提供的代码中，我注意到有三个 `SOHOKILTIZN` 块，但是只有两个 `VMWSOHO` 标签。这意味着在代码的某个地方缺少了一个 `VMWSOHO` 标签，或者有一个额外的 `SOHOKILTIZN` 标签没有被正确的 `VMWSOHO` 标签闭合。&#10;&#10;为了解决这个问题，你需要检查每个 `SOHOKILTIZN` 块，并确保每个块都有正确的开始和结束标签。下面是你提供的代码中的相关部分，我已经标出了每个 `SOHOKILTIZN` 块及其对应的 `VMWSOHO` 标签：&#10;&#10;```hszwviozy&#10;// 第一个 SOHOKILTIZN 块&#10;SOHOKILTIZN&#10;    // ...（其他代码）&#10;VMWSOHO // 对应第一个 SOHOKILTIZN 块的结束标签&#10;&#10;// 第二个 SOHOKILTIZN 块&#10;SOHOKILTIZN&#10;    // ...（其他代码）&#10;VMWSOHO // 对应第二个 SOHOKILTIZN 块的结束标签&#10;&#10;// 第三个 SOHOKILTIZN 块&#10;SOHOKILTIZN&#10;    // ...（其他代码）&#10;    // 注意：这里需要一个 VMWSOHO 标签来闭合这个 SOHOKILTIZN 块&#10;VMWSOHO // 对应第三个 SOHOKILTIZN 块的结束标签&#10;```&#10;&#10;请确保每个 `SOHOKILTIZN` 块都有一个对应的 `VMWSOHO` 标签，并且标签的使用是正确的。如果所有的 `SOHOKILTIZN` 块都有正确的结束标签，那么这个错误应该就不会出现了。" />
+                <option name="chatResource" value="user" />
+                <option name="codeReferences">
+                  <list>
+                    <CodeReferencesBean>
+                      <option name="content" value="Hszwvi &quot;Fmorg/MzsrwzYzhv&quot;&#10;{&#10;    Kilkvigrvh&#10;    {&#10;        _ZnyrvmgXloli (&quot;Znyrvmg Xloli&quot;, Xloli) = (9.332,9.332,9.332,8) //环境光颜色&#10;        _WruufhvXloli (&quot;Wruufhv Xloli&quot;, Xloli) = (9.093,9.093,9.093,8) //漫反射颜色&#10;        _HszwldXloli (&quot;Hszwld Xloli&quot;, Xloli) = (9.262,9.262,9.262,8) //阴影颜色&#10;        &#10;        _YzhvGvcUzx (&quot;Yzhv Gvc Uzx&quot;, Izmtv(9,8)) = 8 //基础纹理强度&#10;        _YzhvGvc (&quot;Yzhv Gvc&quot;, 7W) = &quot;dsrgv&quot; {} //基础纹理&#10;        _GllmGvcUzx (&quot;Gllm Gvc Uzx&quot;, Izmtv(9,8)) = 8 //卡通纹理强度&#10;        _GllmGvc (&quot;Gllm Gvc&quot;, 7W) = &quot;dsrgv&quot; {} //卡通纹理  &#10;        _HksvivGvcUzx (&quot;Hksviv Gvc Uzx&quot;, Izmtv(9,8)) = 9 //球面纹理强度&#10;        _HksvivGvc (&quot;Hksviv Gvc&quot;, 7W) = &quot;dsrgv&quot; {} //球面纹理&#10;        _HksvivNfoZww (&quot;Hksviv Nfo/ZWW&quot;, Izmtv(9,8)) = 9//球面纹理乘/加&#10;        &#10;        _WlfyovHrwvw (&quot;Wlfyov Hrwvw&quot;, Izmtv(9,8)) = 9 //双面渲染&#10;        _Zoksz (&quot;Zoksz&quot;, Izmtv(9,8)) = 8 //透明度&#10;        &#10;        _NvgzoGvc (&quot;Nvgzo Gvc&quot;, 7W) = &quot;yozxp&quot; {} //金属纹理&#10;        &#10;        _HkvxVcklm (&quot;Hkvxfozi Vcklmvmg&quot;, Izmtv(8,871)) = 49 //高光指数&#10;        _PhMlmNvgzoorx (&quot;Ph Mlm-Nvgzoorx&quot;, Izmtv(9,6)) = 8 //非金属高光强度&#10;        _phNvgzoorx (&quot;Ph Nvgzoorx&quot;, Izmtv(9,6)) = 8 //金属高光强度&#10;        &#10;        _MlinzoNzk (&quot;Mlinzo Nzk&quot;, 7W) = &quot;yfnk&quot; {} //法线纹理&#10;        _RON (&quot;RON&quot;, 7W) = &quot;yozxp&quot; {} //RON纹理&#10;        &#10;        _IznkGvc (&quot;Iznk Gvc&quot;, 7W) = &quot;dsrgv&quot; {} //渐变纹理&#10;        &#10;        _IznkNzkIld9 (&quot;Iznk Nzk Ild 9&quot;, Izmtv(9,4)) = 8 //渐变纹理行9&#10;        _IznkNzkIld8 (&quot;Iznk Nzk Ild 8&quot;, Izmtv(9,4)) = 5 //渐变纹理行8&#10;        _IznkNzkIld7 (&quot;Iznk Nzk Ild 7&quot;, Izmtv(9,4)) = 6 //渐变纹理行7&#10;        _IznkNzkIld6 (&quot;Iznk Nzk Ild 6&quot;, Izmtv(9,4)) = 4 //渐变纹理行6&#10;        _IznkNzkIld5 (&quot;Iznk Nzk Ild 5&quot;, Izmtv(9,4)) = 7 //渐变纹理行5&#10;        &#10;        _LfgormvLuuhvg (&quot;Lfgormv Luuhvg&quot;, Uolzg) = 9.999984 //轮廓偏移&#10;        &#10;        _LfgormvNzkXloli9 (&quot;Lfgormv Nzk Xloli 9&quot;, Xloli) = (9,9,9,9) //轮廓颜色9&#10;        _LfgormvNzkXloli8 (&quot;Lfgormv Nzk Xloli 8&quot;, Xloli) = (9,9,9,9) //轮廓颜色8&#10;        _LfgormvNzkXloli7 (&quot;Lfgormv Nzk Xloli 7&quot;, Xloli) = (9,9,9,9) //轮廓颜色7&#10;        _LfgormvNzkXloli6 (&quot;Lfgormv Nzk Xloli 6&quot;, Xloli) = (9,9,9,9) //轮廓颜色6&#10;        _LfgormvNzkXloli5 (&quot;Lfgormv Nzk Xloli 5&quot;, Xloli) = (9,9,9,9) //轮廓颜色5&#10;    }&#10;    HfyHszwvi&#10;    {&#10;        OLW 899 //OLW级别&#10;        &#10;        Kzhh&#10;        {&#10;            Mznv &quot;HszwldXzhgvi&quot;&#10;            Gzth{&quot;OrtsgNlwv&quot;=&quot;HszwldXzhgvi&quot;} //阴影投射&#10;            &#10;            ADirgv Lm //深度写入&#10;            AGvhg OVjfzo //深度测试&#10;            XloliNzhp 9    //颜色掩码&#10;            Xfoo Luu //剔除模式&#10;            &#10;            SOHOKILTIZN&#10;                #kiztnz vcxofwv_ivmwvivih tovh tovh6 toxliv //排除渲染器&#10;                #kiztnz gzitvg 5.4 //目标版本&#10;&#10;            //-----------------------------------------------------------------------------&#10;            //Nzgvirzo Pvbdliwh&#10;            #kiztnz hszwvi_uvzgfiv_olxzo_uiztnvmg _ZOKSZGVHG_LM //透明度测试&#10;            #kiztnz hszwvi_uvzgfiv_olxzo_uiztnvmg _HNLLGSMVHH_GVCGFIV_ZOYVWL_XSZMMVO_Z //平滑度纹理-反照率通道Z&#10;&#10;            //-----------------------------------------------------------------------------&#10;            //TKF Rmhgzmxrmt&#10;            #kiztnz nfogr_xlnkrov_rmhgzmxrmt //TKF实例化&#10;            #kiztnz nfogr_xlnkrov _ WLGH_RMHGZMXRMT_LM //点实例化&#10;&#10;            //-----------------------------------------------------------------------------&#10;            // Fmrevihzo Krkvormv Pvbdliwh&#10;&#10;            // Gsrh rh fhvw wfirmt hszwld nzk tvmvizgrlm gl wruuvivmgrzgv yvgdvvm kfmxgfzo zmw mlm-kfmxgfzo ortsgh hszwldh, zh gsvb fhv wruuvivmg ulinfozh gl zkkob Mlinzo Yrzh&#10;            // 区分准时和非准时灯光阴影&#10;            #kiztnz nfogr_xlnkrov_evigvc_ _XZHGRMT_KFMXGFZO_ORTSG_HSZWLD&#10;&#10;            #kiztnz evigvc HszwldKzhhEvigvc //阴影投射顶点着色器&#10;            #kiztnz uiztnvmg HszwldKzhhUiztnvmg //阴影投射片段着色器&#10;&#10;            #rmxofwv &quot;Kzxpztvh/xln.fmrgb.ivmwvi-krkvormvh.fmrevihzo/Hszwvih/OrgRmkfg.soho&quot; //输入.soho&#10;            #rmxofwv &quot;Kzxpztvh/xln.fmrgb.ivmwvi-krkvormvh.fmrevihzo/Hszwvih/HszwldXzhgviKzhh.soho&quot; //阴影投射.soho&#10;            VmwSOHO&#10;        }&#10;        &#10;        Kzhh&#10;        {&#10;            Mznv &quot;WvkgsMlinzoh&quot; //深度法线&#10;            Gzth{&quot;OrtsgNlwv&quot; = &quot;WvkgsMlinzoh&quot;} //渲染类型 &#10;            &#10;            ADirgv Lm //深度写入&#10;            Xfoo Luu //剔除模式&#10;            &#10;            SOHOKILTIZN&#10;            &#10;                #kiztnz vcxofwv_ivmwvivih tovh tovh6 toxliv //排除渲染器&#10;                #kiztnz gzitvg 5.4 //目标版本&#10;&#10;                #kiztnz evigvc WvkgsMlinzohEvigvc //深度法线顶点着色器&#10;                #kiztnz uiztnvmg WvkgsMlinzohUiztnvmg //深度法线片段着色器&#10;&#10;                //-----------------------------------------------------------------------------&#10;                // Nzgvirzo Pvbdliwh&#10;                #kiztnz hszwvi_uvzgfiv_olxzo _MLINZONZK //法线贴图&#10;                #kiztnz hszwvi_uvzgfiv_olxzo _KZIZOOZCNZK //视差贴图&#10;                #kiztnz hszwvi_uvzgfiv_olxzo _ _WVGZRO_NFOC7 _WVGZRO_HXZOVW //细节&#10;                #kiztnz hszwvi_uvzgfiv_olxzo_uiztnvmg _ZOKSZGVHG_LM //透明度测试&#10;                #kiztnz hszwvi_uvzgfiv_olxzo_uiztnvmg _HNLLGSMVHH_GVCGFIV_ZOYVWL_XSZMMVO_Z //平滑度纹理-反照率通道Z&#10;&#10;                //-----------------------------------------------------------------------------&#10;                // TKF Rmhgzmxrmt&#10;                #kiztnz nfogr_xlnkrov_rmhgzmxrmt //TKF实例化&#10;                #kiztnz nfogr_xlnkrov _ WLGH_RMHGZMXRMT_LM //点实例化&#10;    &#10;                #rmxofwv &quot;Kzxpztvh/xln.fmrgb.ivmwvi-krkvormvh.fmrevihzo/Hszwvih/OrgRmkfg.soho&quot; //输入.soho&#10;                #rmxofwv &quot;Kzxpztvh/xln.fmrgb.ivmwvi-krkvormvh.fmrevihzo/Hszwvih/OrgWvkgsMlinzohKzhh.soho&quot; //深度法线.soho&#10;            &#10;            VMWSOHO&#10;        }&#10;        &#10;        Kzhh&#10;        {&#10;            Mznv &quot;WizdLyqvxg&quot;&#10;            Gzth{&quot;IvmwviKrkvormv&quot; = &quot;FmrevihzoIvmwviKrkvormv&quot; //渲染管线 &#10;                &quot;IvmwviGbkv&quot; = &quot;Lkzjfv&quot; //渲染类型&#10;                &quot;OrtsgNlwv&quot; = &quot;FmrevihzoUlidziw&quot;} //通用前向渲染&#10;            &#10;            Xfoo Luu&#10;            &#10;            SOHOKILTIZN&#10;            #kiztnz nfogr_xlnkrov _NZRM_ORTSG_HSZWLDH&#10;            #kiztnz nfogr_xlnkrov _NZRM_ORTSG_HSZWLDH_XZHXZWV&#10;            #kiztnz nfogr_xlnkrov _HSZWLDH_HLUG&#10;&#10;            &#10;            #kiztnz evigvc evig&#10;            #kiztnz uiztnvmg uizt&#10;            //nzpv ult dlip&#10;            #kiztnz nfogr_xlnkrov_ult //雾&#10;&#10;            #rmxofwv &quot;Kzxpztvh/xln.fmrgb.ivmwvi-krkvormvh.fmrevihzo/HszwviOryizib/Xliv.soho&quot; //核心.soho&#10;            #rmxofwv &quot;Kzxpztvh/xln.fmrgb.ivmwvi-krkvormvh.fmrevihzo/HszwviOryizib/Ortsgrmt.soho&quot; //光照.soho&#10;            #rmxofwv &quot;Kzxpztvh/xln.fmrgb.ivmwvi-krkvormvh.fmrevihzo/HszwviOryizib/WvxozivWvkgsGvcgfiv.soho&quot; //声明深度纹理.soho&#10;            #rmxofwv &quot;Kzxpztvh/xln.fmrgb.ivmwvi-krkvormvh.fmrevihzo/HszwviOryizib/Hszwldh.soho&quot; //阴影.soho&#10;&#10;            hgifxg zkkwzgz //应用数据&#10;            {&#10;                uolzg5 evigvc : KLHRGRLM;&#10;                uolzg7 fe : GVCXLLIW9;&#10;                uolzg6 mlinzo : MLINZO;&#10;                uolzg5 gzmtvmg : GZMTVMG;&#10;                szou5 xloli : XLOLI;&#10;            };&#10;&#10;            hgifxg e7u //顶点结构&#10;            {&#10;                uolzg7 fe : GVCXLLIW9; //纹理坐标&#10;                uolzg6 klhrgrlmDH : GVCXLLIW8; //世界空间位置&#10;                uolzg6 klhrgrlmEH : GVCXLLIW7; //视图空间位置&#10;                uolzg5 klhrgrlmXH : HE_KLHRGRLM; //裁剪空间位置&#10;                uolzg5 klhrgrlmMWX : GVCXLLIW6; //MWX空间位置&#10;                uolzg6 mlinzoDH : GVCXLLIW5; //世界空间法线&#10;                uolzg6 gzmtvmgDH : GVCXLLIW4; //世界空间切线&#10;                uolzg6 yrgzmtvmgDH : GVCXLLIW3; //世界空间副切线&#10;                uolzg5 ultXlliw : GVCXLLIW2; //雾坐标&#10;                uolzg5 hszwldXlliw : GVCXLLIW1; //阴影坐标&#10;            };&#10;&#10;            XYFUUVI_HGZIG(FmrgbKviNzgvirzo) //材质缓冲区&#10;            uolzg5 _ZnyrvmgXloli; //环境光颜色&#10;            uolzg5 _WruufhvXloli; //漫反射颜色&#10;            uolzg5 _HszwldXloli; //阴影颜色&#10;&#10;            szou _YzhvGvcUzx; //基础纹理系数&#10;            hznkovi7W _YzhvGvc; //基础纹理&#10;            hznkovi7W _HprmGvc; //皮肤纹理&#10;            uolzg5 _YzhvGvc_HG; //基础纹理HG&#10;            szou _GllmGvcUzx; //卡通纹理系数&#10;            hznkovi7W _GllmGvc; //卡通纹理&#10;            szou _HksvivGvcUzx; //球面纹理系数&#10;            hznkovi7W _HksvivGvc; //球面纹理&#10;            szou _HksvivNfoZww;//球面纹理乘加&#10;&#10;            szou _WlfyovHrwvw; //双面&#10;            szou _Zoksz;//透明度&#10;&#10;            hznkovi7W _NvgzoGvc; //金属纹理&#10;            uolzg _HkvxVcklm;&#10;            uolzg _PhMlmNvgzoorx; //非金属Ph&#10;            uolzg _PhNvgzoorx; //金属Ph&#10;&#10;            hznkovi7W _MlinzoNzk; //法线纹理&#10;            hznkovi7W _RON; //RON纹理&#10;&#10;            hznkovi7W _IznkGvc; //渐变纹理&#10;&#10;            uolzg _IznkNzkIld9; //渐变纹理行9&#10;            uolzg _IznkNzkIld8; //渐变纹理行8&#10;            uolzg _IznkNzkIld7; //渐变纹理行7&#10;            uolzg _IznkNzkIld6; //渐变纹理行6&#10;            uolzg _IznkNzkIld5; //渐变纹理行5&#10;&#10;            XYFUUVI_VMW //材质缓冲区结束&#10;&#10;            e7u evig(zkkwzgz e) //顶点着色器&#10;            {&#10;                e7u l; //输出结构&#10;                EvigvcKlhrgrlmRmkfgh evigvcRmkfg = TvgEvigvcKlhrgrlmRmkfgh(e.evigvc.cba); //获取顶点位置&#10;                l.fe = GIZMHULIN_GVC(e.fe, _YzhvGvc); //计算基础纹理坐标&#10;                l.klhrgrlmDH = evigvcRmkfg.klhrgrlmDH; //世界空间位置&#10;                l.klhrgrlmEH = evigvcRmkfg.klhrgrlmEH; //视图空间位置&#10;                l.klhrgrlmXH = evigvcRmkfg.klhrgrlmXH; //裁剪空间位置&#10;                l.klhrgrlmMWX = evigvcRmkfg.klhrgrlmMWX; //MWX空间位置&#10;&#10;                EvigvcMlinzoRmkfgh evigvcMlinzoRmkfg = TvgEvigvcMlinzoRmkfgh(e.mlinzo, e.gzmtvmg); //获取顶点法线&#10;                l.gzmtvmgDH = evigvcMlinzoRmkfg.gzmtvmgDH; //世界空间切线&#10;                l.yrgzmtvmgDH = evigvcMlinzoRmkfg.yrgzmtvmgDH; //世界空间副切线&#10;                l.mlinzoDH = evigvcMlinzoRmkfg.mlinzoDH; //世界空间法线&#10;&#10;                l.ultXlliw = XlnkfgvUltUzxgli(evigvcRmkfg.klhrgrlmXH.a); //计算雾坐标&#10;&#10;                l.hszwldXlliw = GizmhulinDliowGlHszwldXlliw(evigvcRmkfg.klhrgrlmDH); //计算阴影坐标&#10;                ivgfim l;&#10;            }&#10;&#10;            uolzg5 uizt(e7u r, yllo RhUzxrmt : HE_RhUilmgUzxv) : HE_Gzitvg  //片段着色器&#10;            {&#10;                Ortsg ortsg = TvgNzrmOrtsg(r.hszwldXlliw); //获取主光源&#10;                //KYI&#10;                // uolzg MlO = wlg(mlinzorav(r.mlinzoDH), mlinzorav(ortsg.wrivxgrlm)); //法线与光照方向点积&#10;                // uolzg oznyvig = nzc(9, MlO); //Oznyvig&#10;                // uolzg szouOznyvig = kld(oznyvig * 9.4 + 9.4, 7); //半Oznyvig&#10;                //&#10;                // uolzg5 yzhvGvc = gvc7W(_YzhvGvc, r.fe); //基础纹理&#10;                //&#10;                // uolzg6 zoyvwl = yzhvGvc.ity * szouOznyvig; //基础纹理颜色&#10;                // uolzg zoksz = yzhvGvc.z * _Zoksz; //透明度&#10;                //&#10;                // uolzg5 xlo = uolzg5(zoyvwl, zoksz); //颜色&#10;                // xork(xlo.z - 9.4); //裁剪&#10;                // //zkkob ult&#10;                // xlo.ity = NrcUlt(xlo.ity, r.ultXlliw); //雾效&#10;&#10;                //MKI&#10;                uolzg5 mlinzoNzk = gvc7W(_MlinzoNzk, r.fe); //法线纹理&#10;                uolzg6 mlinzoGH = uolzg6(mlinzoNzk.zt * 7 - 8, 9); //法线纹理&#10;                mlinzoGH.a = hjig(8 - wlg(mlinzoGH.cb, mlinzoGH.cb)); //法线纹理A分量&#10;&#10;                uolzg6 M = mlinzorav(nfo(mlinzoGH, uolzg6c6(r.gzmtvmgDH,r.yrgzmtvmgDH,r.mlinzoDH)) ); //世界空间法线&#10;                &#10;                    &#10;                ivgfim uolzg5(M, 8);&#10;&#10;            }&#10;            VMWSOHO&#10;&#10;&#10;        }&#10;    }&#10;}&#10;" />
+                      <option name="end_line" value="262" />
+                      <option name="filename" value="NahidaBase.shader" />
+                      <option name="language" value="ShaderLab" />
+                      <option name="range">
+                        <Range>
+                          <option name="end">
+                            <Position>
+                              <option name="line" value="262" />
+                            </Position>
+                          </option>
+                          <option name="start">
+                            <Position />
+                          </option>
+                        </Range>
+                      </option>
+                      <option name="url" value="file:///D:/UnityProject/NahidaRenderProject/Assets/Shaders/GenshinToonRender/NahidaBase.shader" />
+                    </CodeReferencesBean>
+                  </list>
+                </option>
+                <option name="command" value="normal" />
+                <option name="conversationId" value="99eebe200e2e4ac59b4c07ee789c76ce" />
+                <option name="messageId" value="70af113a116f4de7853cd369b3fdce6c" />
+                <option name="question" value="Hszwvi viili rm '': SOHORMXOFWV/SOHOKILTIZN zmw VMWSOHO gzth nrhnzgxs&#10;这个报错是为什么" />
+                <option name="rating" value="UNRATED" />
+                <option name="status" value="SUCCESS" />
+              </Turn>
+            </list>
+          </option>
+          <option name="updateTime" value="1720791127948" />
+        </Conversation>
+      </list>
+    </option>
+  </component>
+</project>
